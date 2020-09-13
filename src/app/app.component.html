@@ -1,0 +1,17 @@
+<h1>File Upload Demo</h1>
+<app-file-upload class="file-upload" (filesChanged)="setFileList($event)">
+  <div>Drag and drop files here</div>
+  <div>
+    {{ fileList1 | json }}
+  </div>
+</app-file-upload>
+<app-file-upload
+  class="file-upload"
+  [dragDropEnabled]="false"
+  (filesChanged)="setFileList2($event)"
+>
+  <div>Drag and drop disabled.<div></div> Files can only be added with click.</div>
+  <div>
+    {{ fileList2 | json }}
+  </div>
+</app-file-upload>
